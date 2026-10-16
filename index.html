@@ -1,0 +1,231 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One More Chance ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Georgia, serif;
+    color: white;
+    background: linear-gradient(135deg, #160b1c, #53152f, #190d26);
+    overflow-x: hidden;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff8fab;
+    animation: float 8s linear infinite;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 0.6; }
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.card {
+    width: 100%;
+    max-width: 560px;
+    padding: 35px 25px;
+    text-align: center;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    backdrop-filter: blur(12px);
+    position: relative;
+    z-index: 1;
+}
+
+.emoji {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #ffb3c6;
+    font-size: clamp(28px, 7vw, 39px);
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #f8eaf0;
+    margin-bottom: 17px;
+}
+
+.highlight {
+    color: #ffb3c6;
+    font-weight: bold;
+}
+
+.question {
+    margin-top: 25px;
+    font-size: 23px;
+    color: #ffd6e0;
+}
+
+button {
+    padding: 13px 20px;
+    margin: 10px 5px 0;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.yes {
+    background: #ff8fab;
+    color: #351020;
+}
+
+.talk {
+    background: transparent;
+    border: 1px solid #ffb3c6;
+    color: white;
+}
+
+#response {
+    margin-top: 25px;
+    color: #ffd6e0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+footer {
+    margin-top: 25px;
+    color: #dcbac9;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="emoji">❤️‍🩹</div>
+
+    <h1>Can We Try Again?</h1>
+
+    <p>Hey, my love...</p>
+
+    <p>
+        I don't really know how to put everything I feel into words,
+        but I wanted to try one last time.
+    </p>
+
+    <p>
+        I know things between us haven't worked out the way we hoped.
+        Maybe we made mistakes, maybe we got hurt, and maybe things
+        became too difficult. But what we had still means so much to me.
+    </p>
+
+    <p>
+        The truth is, <span class="highlight">I'm still deeply attached to you.</span>
+        Letting go of someone who became such an important part of my life
+        isn't easy for me. I miss you, I miss us, and I miss the little
+        things that used to make my days better.
+    </p>
+
+    <p>
+        I know my attachment makes this harder for me, and I don't want
+        to put that responsibility on you. I want to learn how to handle
+        my feelings better, communicate better, and become a better partner.
+    </p>
+
+    <p>
+        I'm not asking you to forget everything that happened.
+        I'm just asking you to think about us once more.
+    </p>
+
+    <p>
+        <span class="highlight">
+        Could we have one honest conversation and see if there's
+        still a chance for us?
+        </span>
+    </p>
+
+    <p>
+        We don't have to pretend everything is perfect.
+        We could take things slowly, understand each other,
+        and try again if we both want to.
+    </p>
+
+    <div class="question">
+        Would you consider giving us another chance? 🥺
+    </div>
+
+    <button class="yes" onclick="showYes()">
+        Maybe we can try again ❤️
+    </button>
+
+    <button class="talk" onclick="showTalk()">
+        Let's talk first 💌
+    </button>
+
+    <div id="response"></div>
+
+    <footer>
+        Whatever your answer, I'll respect your feelings. ❤️
+    </footer>
+</div>
+
+<script>
+function showYes() {
+    document.getElementById("response").innerHTML =
+    "You have no idea how much this means to me. ❤️<br>" +
+    "Let's talk honestly, take things slowly, and see " +
+    "if we can build something better together.";
+}
+
+function showTalk() {
+    document.getElementById("response").innerHTML =
+    "Thank you for being willing to talk. ❤️<br>" +
+    "I'll listen to you honestly, without arguing or rushing you. " +
+    "Let's understand each other first.";
+}
+
+for (let i = 0; i < 18; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "♥";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDelay = Math.random() * 8 + "s";
+    heart.style.animationDuration = (6 + Math.random() * 6) + "s";
+    heart.style.fontSize = (12 + Math.random() * 20) + "px";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
+```
